@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- MySQL connection -->
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/ecommerce
+        </property>
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+
+        <property name="hibernate.connection.password">
+            ${mysql.password}
+        </property>
+
+        <!-- Hibernate settings -->
+        <property name="hibernate.show_sql">
+            true
+        </property>
+
+        <property name="hibernate.format_sql">
+            true
+        </property>
+
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <!-- Entities -->
+        <mapping class="com.example.entity.Category"/>
+        <mapping class="com.example.entity.Product"/>
+        <mapping class="com.example.entity.Users"/>
+        <mapping class="com.example.entity.Orders"/>
+        <mapping class="com.example.entity.OrderDetails"/>
+
+    </session-factory>
+</hibernate-configuration>
