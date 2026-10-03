@@ -1,6 +1,6 @@
 # Hibernate E-Commerce Application
 
-A Java-based e-commerce application developed using Hibernate ORM and MySQL.
+A Maven-based Java Application that implements E-commerce data model developed using Hibernate ORM and MySQL.
 
 ## Technologies
 
